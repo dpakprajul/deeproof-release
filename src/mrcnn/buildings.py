@@ -184,7 +184,7 @@ class BuildingDataset(utils.Dataset):
             class_name = info['region_attributes'][i]["building"].strip()
             # mask[:, :, i] = skimage.draw.polygon(p['all_points_y'], p['all_points_x'])
             class_ids[i] = self.class_name_map[class_name]
-            mask[rr, cc, i] = 1
+            mask[rr, cc, i] = 512
 
         # Return mask, and array of class IDs of each instance. Since we have
         # one class ID only, we return an array of 1s
